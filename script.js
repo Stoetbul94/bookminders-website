@@ -239,6 +239,85 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100);
 });
 
+// 3D Calculator Interactions
+document.addEventListener('DOMContentLoaded', () => {
+    const calcButtons = document.querySelectorAll('.calc-button');
+    const calculator = document.querySelector('.calculator-3d');
+    
+    calcButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            button.style.transform = 'translateZ(2px)';
+            setTimeout(() => {
+                button.style.transform = 'translateZ(5px)';
+            }, 150);
+        });
+        
+        button.addEventListener('mouseenter', () => {
+            button.style.transform = 'translateZ(8px)';
+        });
+        
+        button.addEventListener('mouseleave', () => {
+            button.style.transform = 'translateZ(5px)';
+        });
+    });
+    
+    // Mouse move effect for calculator
+    document.addEventListener('mousemove', (e) => {
+        if (calculator) {
+            const rect = calculator.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            const mouseX = e.clientX - centerX;
+            const mouseY = e.clientY - centerY;
+            
+            const rotateX = (mouseY / rect.height) * 10;
+            const rotateY = (mouseX / rect.width) * 10;
+            
+            calculator.style.transform = `rotateX(${20 + rotateX}deg) rotateY(${-15 + rotateY}deg)`;
+        }
+    });
+    
+    // Reset calculator position when mouse leaves
+    document.addEventListener('mouseleave', () => {
+        if (calculator) {
+            calculator.style.transform = 'rotateX(20deg) rotateY(-15deg)';
+        }
+    });
+});
+
+// 3D Button Effects
+document.querySelectorAll('.btn-3d').forEach(button => {
+    button.addEventListener('mousemove', (e) => {
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = (y - centerY) / centerY * 10;
+        const rotateY = (centerX - x) / centerX * 10;
+        
+        button.style.transform = `translateY(-5px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+    
+    button.addEventListener('mouseleave', () => {
+        button.style.transform = 'translateY(0) rotateX(0deg) rotateY(0deg)';
+    });
+});
+
+// Parallax effect for floating shapes
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const shapes = document.querySelectorAll('.shape');
+    
+    shapes.forEach((shape, index) => {
+        const speed = 0.5 + (index * 0.1);
+        const yPos = -(scrolled * speed);
+        shape.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.1}deg)`;
+    });
+});
+
 // Performance optimization: Debounce scroll events
 function debounce(func, wait) {
     let timeout;
