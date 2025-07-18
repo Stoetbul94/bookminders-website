@@ -318,74 +318,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Services Section Animations and Interactions
-document.addEventListener('DOMContentLoaded', () => {
-    const serviceCards = document.querySelectorAll('.service-card');
-    
-    // Intersection Observer for service cards
-    const serviceObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('aos-animate');
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
-    
-    serviceCards.forEach(card => {
-        serviceObserver.observe(card);
-        
-        // Enhanced hover effects
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-8px) scale(1.02)';
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0) scale(1)';
-        });
-        
-        // Click effect
-        card.addEventListener('click', () => {
-            card.style.transform = 'translateY(-4px) scale(0.98)';
-            setTimeout(() => {
-                card.style.transform = 'translateY(-8px) scale(1.02)';
-            }, 150);
-        });
-    });
-    
-    // Staggered animation for service cards
-    const animateServiceCards = () => {
-        serviceCards.forEach((card, index) => {
-            setTimeout(() => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                
-                setTimeout(() => {
-                    card.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, 100);
-            }, index * 100);
-        });
-    };
-    
-    // Trigger animation when services section comes into view
-    const servicesSection = document.querySelector('.services');
-    if (servicesSection) {
-        const servicesObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateServiceCards();
-                    servicesObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.3 });
-        
-        servicesObserver.observe(servicesSection);
-    }
-});
+
 
 // Performance optimization: Debounce scroll events
 function debounce(func, wait) {
