@@ -333,6 +333,53 @@ function debounce(func, wait) {
     };
 }
 
+// Testimonials Carousel
+let currentTestimonialIndex = 0;
+const testimonials = document.querySelectorAll('.testimonial-card');
+const dots = document.querySelectorAll('.dot');
+
+function showTestimonial(index) {
+    // Hide all testimonials
+    testimonials.forEach(testimonial => {
+        testimonial.classList.remove('active');
+    });
+    
+    // Remove active class from all dots
+    dots.forEach(dot => {
+        dot.classList.remove('active');
+    });
+    
+    // Show current testimonial and activate corresponding dot
+    if (testimonials[index]) {
+        testimonials[index].classList.add('active');
+    }
+    if (dots[index]) {
+        dots[index].classList.add('active');
+    }
+}
+
+function changeTestimonial(direction) {
+    currentTestimonialIndex += direction;
+    
+    if (currentTestimonialIndex >= testimonials.length) {
+        currentTestimonialIndex = 0;
+    } else if (currentTestimonialIndex < 0) {
+        currentTestimonialIndex = testimonials.length - 1;
+    }
+    
+    showTestimonial(currentTestimonialIndex);
+}
+
+function currentTestimonial(index) {
+    currentTestimonialIndex = index;
+    showTestimonial(currentTestimonialIndex);
+}
+
+// Auto-rotate testimonials every 5 seconds
+setInterval(() => {
+    changeTestimonial(1);
+}, 5000);
+
 // Apply debouncing to scroll events
 const debouncedScrollHandler = debounce(() => {
     // Scroll-based animations can go here
