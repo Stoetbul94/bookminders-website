@@ -29,7 +29,10 @@
                     <a href="#services" class="nav-link">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
             <div class="hamburger">
@@ -235,6 +238,175 @@
                 <button class="carousel-btn next" onclick="changeTestimonial(1)">
                     <i class="fas fa-chevron-right"></i>
                 </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about bookkeeping and tax services in South Africa</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What tax returns do I need to submit in South Africa?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>In South Africa, you typically need to submit:</p>
+                        <ul>
+                            <li><strong>Income Tax Return (ITR12)</strong> - For individuals and sole proprietors</li>
+                            <li><strong>Company Income Tax Return (IT14)</strong> - For registered companies</li>
+                            <li><strong>VAT Returns (VAT201)</strong> - If your turnover exceeds R1 million</li>
+                            <li><strong>PAYE Returns (EMP201)</strong> - If you have employees</li>
+                            <li><strong>Provisional Tax Returns</strong> - For businesses with taxable income</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>When are the tax filing deadlines in South Africa?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Key tax deadlines in South Africa:</p>
+                        <ul>
+                            <li><strong>Individual Tax Returns:</strong> 23 October (manual) / 24 November (eFiling)</li>
+                            <li><strong>Company Tax Returns:</strong> 12 months after financial year-end</li>
+                            <li><strong>VAT Returns:</strong> 25th of the month following the VAT period</li>
+                            <li><strong>PAYE Returns:</strong> 7th of the month following the pay period</li>
+                            <li><strong>Provisional Tax:</strong> 31 August and 28 February</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Do I need to register for VAT in South Africa?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>VAT registration is mandatory in South Africa when:</p>
+                        <ul>
+                            <li>Your taxable turnover exceeds <strong>R1 million</strong> in any 12-month period</li>
+                            <li>You expect to exceed R1 million in the next 12 months</li>
+                            <li>You acquire a business as a going concern</li>
+                        </ul>
+                        <p>Voluntary registration is possible if your turnover is between R50,000 and R1 million.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What records must I keep for SARS compliance?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SARS requires you to keep the following records for 5 years:</p>
+                        <ul>
+                            <li><strong>Financial Records:</strong> Invoices, receipts, bank statements</li>
+                            <li><strong>Tax Records:</strong> VAT returns, PAYE certificates, tax calculations</li>
+                            <li><strong>Business Records:</strong> Contracts, agreements, correspondence</li>
+                            <li><strong>Asset Records:</strong> Fixed asset registers, depreciation schedules</li>
+                            <li><strong>Employment Records:</strong> Salary records, IRP5 certificates</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How much does bookkeeping cost in South Africa?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Bookkeeping costs vary based on your business size and complexity:</p>
+                        <ul>
+                            <li><strong>Small Business (R0-R2M turnover):</strong> R800-R2,500 per month</li>
+                            <li><strong>Medium Business (R2M-R10M turnover):</strong> R2,500-R5,000 per month</li>
+                            <li><strong>Large Business (R10M+ turnover):</strong> R5,000-R15,000 per month</li>
+                            <li><strong>Additional Services:</strong> VAT returns, payroll, tax returns extra</li>
+                        </ul>
+                        <p>We offer competitive rates and can provide a custom quote based on your needs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What are the penalties for late tax submissions?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SARS penalties for late submissions include:</p>
+                        <ul>
+                            <li><strong>Late Filing:</strong> R250 per month (up to R16,000)</li>
+                            <li><strong>Late Payment:</strong> 10% penalty on outstanding amount</li>
+                            <li><strong>Interest:</strong> Prime rate + 3% on outstanding amounts</li>
+                            <li><strong>Understatement Penalty:</strong> 25-200% of tax shortfall</li>
+                            <li><strong>Criminal Charges:</strong> For serious non-compliance</li>
+                        </ul>
+                        <p>Professional bookkeeping helps avoid these costly penalties.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Can I claim business expenses against my tax?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can claim legitimate business expenses including:</p>
+                        <ul>
+                            <li><strong>Operating Expenses:</strong> Rent, utilities, office supplies</li>
+                            <li><strong>Vehicle Expenses:</strong> Fuel, maintenance, insurance (business use only)</li>
+                            <li><strong>Technology:</strong> Computers, software, internet costs</li>
+                            <li><strong>Professional Services:</strong> Legal fees, accounting fees, consulting</li>
+                            <li><strong>Marketing:</strong> Advertising, website costs, business cards</li>
+                            <li><strong>Travel:</strong> Accommodation, meals (business-related)</li>
+                        </ul>
+                        <p>Keep detailed records and receipts for all claims.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What's the difference between a sole proprietor and a company?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Key differences between business structures in South Africa:</p>
+                        <div class="comparison-table">
+                            <div class="comparison-row">
+                                <div class="comparison-header">Aspect</div>
+                                <div class="comparison-header">Sole Proprietor</div>
+                                <div class="comparison-header">Company (Pty Ltd)</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-label">Tax Rate</div>
+                                <div class="comparison-value">Progressive (18-45%)</div>
+                                <div class="comparison-value">28% flat rate</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-label">Liability</div>
+                                <div class="comparison-value">Unlimited personal liability</div>
+                                <div class="comparison-value">Limited to company assets</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-label">Setup Cost</div>
+                                <div class="comparison-value">R0</div>
+                                <div class="comparison-value">R125 + professional fees</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-label">Annual Compliance</div>
+                                <div class="comparison-value">Basic tax returns</div>
+                                <div class="comparison-value">Annual returns + financials</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
